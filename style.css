@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(30, 38%, 92%);
+  color: hsl(228, 12%, 48%);
+  font-family: Montserrat;
+}
+
+.container {
+  display: grid;
+  background-color: hsl(0, 0%, 100%);
+  width: 600px;
+  /* ხრიკი გაცენტვრისთვის */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* სვეტების რაოდენობა და სიგრძე */
+  grid-template-columns: auto 1fr auto;
+  gap: 30px;
+  border-radius: 10px;
+  /* კონტეინერს გარეთ ყველაფერი დაიმალება */
+  overflow: hidden;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  gap: 22px;
+}
+
+.perfume-img {
+  width: 300px;
+  height: 450px;
+}
+
+h1 {
+  color: hsl(212, 21%, 14%);
+  font-family: Fraunces;
+}
+
+.perfume {
+  /* ასოებს შორის დაშორება */
+  letter-spacing: 4px;
+  font-size: 12px;
+}
+
+.product-description {
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.price {
+  position: relative;
+  font-size: 30px;
+  color: hsl(158, 36%, 37%);
+  font-family: Fraunces;
+}
+
+.price::after {
+  color: hsl(228, 12%, 48%);
+  position: absolute;
+  content: "$169.99";
+  font-size: 15px;
+  top: 20%;
+  margin-left: 20px;
+  /* ტექსტზე ხაზის გატარება */
+  text-decoration: line-through;
+}
+
+button {
+  font-family: Montserrat;
+  font-weight: 700;
+  /* align-items: center; */
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(158, 36%, 37%);
+  border: none;
+  height: 45px;
+  border-radius: 8px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: hsl(156, 34%, 22%);
+}
+
+button:active {
+  background-color: hsl(0, 0%, 100%);
+  border: 2px solid hsl(158, 36%, 37%);
+  color: hsl(158, 36%, 37%);
+}
+
+.cart {
+  margin-bottom: -3px;
+  margin-right: 10px;
+}
